@@ -11,18 +11,14 @@ final class ReaderTest extends TestCase
         // Set
         $file = new File();
         $reader = new Reader($file);
-
-
         $reader->setDirectory(__DIR__.'/files');
         $reader->setNameFile('data.csv');
-
         $expected = $this->getExpectedCsv();
 
         // Action
         $result = $reader->readFile();
 
         // Assertion
-
         $this->assertEquals($expected, $result);
 
     }
@@ -32,17 +28,14 @@ final class ReaderTest extends TestCase
         // Set
         $file = new File();
         $reader = new Reader($file);
-
         $reader->setDirectory(__DIR__.'/files');
         $reader->setNameFile('data.txt');
-
         $expected = $this->getExpectedTxt();
 
         // Action
         $result = $reader->readFile();
 
         // Assertion
-
         $this->assertEquals($expected, $result);
 
     }
@@ -72,6 +65,7 @@ final class ReaderTest extends TestCase
             ]
             ];
     }
+
     public function getExpectedTxt(): array
     {
         return  [
@@ -97,5 +91,4 @@ final class ReaderTest extends TestCase
             ]
             ];
     }
-
 }
