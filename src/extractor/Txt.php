@@ -1,5 +1,4 @@
 <?php
-
 namespace src\extractor;
 
 class Txt extends File
@@ -10,9 +9,10 @@ class Txt extends File
         while (!feof($handle)) {
             $line = fgets($handle);
             $this->setData(
-                substr($line,11, 30),
-                substr($line,0, 11),
-                substr($line,30, 50));
+                substr($line, 11, 30),
+                substr($line, 0, 11),
+                substr($line, 30, 50)
+            );
         }
         fclose($handle);
 

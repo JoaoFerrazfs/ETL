@@ -1,5 +1,4 @@
 <?php
-
 namespace src;
 
 use src\extractor\File;
@@ -46,7 +45,5 @@ class Reader
             [new $class, 'readFile'],
             [$patch]
         );
-
     }
-
 }
