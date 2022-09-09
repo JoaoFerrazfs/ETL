@@ -2,20 +2,20 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use src\Leitor;
-use src\extrator\Arquivo;
+use src\Reader;
+use src\extractor\File;
 
-$arquivo = new Arquivo();
-$leitor = new Leitor($arquivo);
-$leitor->setDiretorio(__DIR__.'/arquivos');
+$file = new File();
+$reader = new Reader($file);
+$reader->setDirectory(__DIR__ . '/files');
 
 //-------------------------------------------------     txt
-$leitor->setNomeArquivo('dados.txt');
-$arrayTxt = $leitor->lerArquivo();
+$reader->setNameFile('data.txt');
+$arrayTxt = $reader->readFile();
 
 //-------------------------------------------------     csv
-$leitor->setNomeArquivo('dados.csv');
-$arrayCsv = $leitor->lerArquivo();
+$reader->setNameFile('data.csv');
+$arrayCsv = $reader->readFile();
 
 echo '<pre>';
 print_r(array_merge($arrayTxt, $arrayCsv));
