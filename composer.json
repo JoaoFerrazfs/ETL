@@ -1,0 +1,15 @@
+{
+    "name": "joao/etl",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JoaoFerrazfs",
+            "email": "joaoferrazp@gmail.com"
+        }
+    ],
+    "require": {}
+}
