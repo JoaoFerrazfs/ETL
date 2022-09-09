@@ -9,9 +9,9 @@ class Txt extends File
         while (!feof($handle)) {
             $line = fgets($handle);
             $this->setData(
-                substr($line, 11, 30),
-                substr($line, 0, 11),
-                substr($line, 30, 50)
+                trim(substr($line, 12, 15)), //nome
+                trim(substr($line, 0, 11)), //cpf
+                trim(substr($line, 28, 50)) // email
             );
         }
         fclose($handle);

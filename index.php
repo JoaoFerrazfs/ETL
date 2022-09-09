@@ -18,6 +18,6 @@ $reader->setNameFile('data.csv');
 $arrayCsv = $reader->readFile();
 
 echo '<pre>';
-print_r(array_merge($arrayTxt, $arrayCsv));
+print_r($arrayTxt);
 echo '<pre>';
 
